@@ -19,7 +19,8 @@ jobs:
         run: |
           & "C:\Program Files\Tailscale\tailscale.exe" up --authkey 'tskey-auth-kKp9CCqJUQ11CNTRL-xB2qLrvzfeQBTtm3bUyLfQc1HZUk6DBS'
           
-      - name: Keep Alive
+      - name: Keep Alive (6 Hours Max)
         run: |
-          Write-Host "RDP chalu hai! RD Client app se connect karein."
-          Start-Sleep -Seconds 3600
+          Write-Host "RDP chalu hai! Ye machine ab 6 ghante tak chalegi."
+          Start-Sleep -Seconds 21600
+          
