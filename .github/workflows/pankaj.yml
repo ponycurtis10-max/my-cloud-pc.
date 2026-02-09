@@ -1,0 +1,27 @@
+name: Windows_RDP_Pankaj
+on: workflow_dispatch
+
+jobs:
+  build:
+    runs-on: windows-latest
+    steps:
+      - name: User Setup
+        run: |
+          net user AdminPankaj Pankaj@123 /add
+          net localgroup administrators AdminPankaj /add
+          
+      - name: Install Tailscale
+        run: |
+          Invoke-WebRequest https://pkgs.tailscale.com/stable/tailscale-setup-latest.exe -OutFile tailscale.exe
+          Start-Process -FilePath .\tailscale.exe -ArgumentList "/quiet" -Wait
+          
+      - name: Connect Tailscale
+        run: |
+          # Niche 'tskey-auth-khFELke8Ko11CNTRL-nqN84E4pXJcXUmwmjaZ9KcrSjjH42pk1' ki jagah apni Tailscale Auth Key paste karein
+          & "C:\Program Files\Tailscale\tailscale.exe" up --authkey 'YOUR_KEY_HERE'
+          
+      - name: Keep Alive
+        run: |
+          Write-Host "RDP chalu hai! RD Client app se connect karein."
+          Start-Sleep -Seconds 3600
+          
