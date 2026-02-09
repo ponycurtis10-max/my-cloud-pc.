@@ -17,11 +17,9 @@ jobs:
           
       - name: Connect Tailscale
         run: |
-          # Niche 'tskey-auth-khFELke8Ko11CNTRL-nqN84E4pXJcXUmwmjaZ9KcrSjjH42pk1' ki jagah apni Tailscale Auth Key paste karein
-          & "C:\Program Files\Tailscale\tailscale.exe" up --authkey 'YOUR_KEY_HERE'
+          & "C:\Program Files\Tailscale\tailscale.exe" up --authkey 'tskey-auth-khFELke8Ko11CNTRL-nqN84E4pXJcXUmwmjaZ9KcrSjjH42pk1'
           
       - name: Keep Alive
         run: |
           Write-Host "RDP chalu hai! RD Client app se connect karein."
           Start-Sleep -Seconds 3600
-          
