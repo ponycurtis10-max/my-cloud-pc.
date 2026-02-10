@@ -17,10 +17,10 @@ jobs:
           
       - name: Connect Tailscale
         run: |
-          & "C:\Program Files\Tailscale\tailscale.exe" up --authkey 'tskey-auth-kKp9CCqJUQ11CNTRL-xB2qLrvzfeQBTtm3bUyLfQc1HZUk6DBS'
+          & "C:\Program Files\Tailscale\tailscale.exe" up --authkey 'tskey-auth-kop8h9f5dz11CNTRL-V6pfdWmQcM5pHsQSkSh9N5tn2uNeUiBH'
           
-      - name: Keep Alive (6 Hours Max)
+      - name: Keep Alive (Max Limit)
         run: |
-          Write-Host "RDP chalu hai! Ye machine ab 6 ghante tak chalegi."
+          Write-Host "RDP chalu hai! Note: GitHub free tier restricts jobs to 6 hours."
+          # 21600 seconds = 6 hours (GitHub's hard limit)
           Start-Sleep -Seconds 21600
-          
