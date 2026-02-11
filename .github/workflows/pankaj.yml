@@ -17,10 +17,10 @@ jobs:
           
       - name: Connect Tailscale
         run: |
-          & "C:\Program Files\Tailscale\tailscale.exe" up --authkey 'tskey-auth-kNjtSXqGus11CNTRL-5SXkdpSnjyWvzznyEHLByWYu9ekdcDS7L'
+          & "C:\Program Files\Tailscale\tailscale.exe" up --authkey 'tskey-auth-kLDcTNwbq621CNTRL-aothC9D19Dfmu54P3hibCf7r9KLcBgAmP'
           
       - name: Keep Alive (Max Limit)
         run: |
-          Write-Host "RDP Active hai! 1920x1080 setup karein."
-          # GitHub Free tier limit 6 hours hai
+          Write-Host "RDP Active hai! OBS mein 1920x1080 resolution manually type karein."
+          # GitHub Free tier limit 6 hours (21600 seconds) hai
           Start-Sleep -Seconds 21600
