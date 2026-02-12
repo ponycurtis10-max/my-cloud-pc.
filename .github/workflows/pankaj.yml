@@ -17,7 +17,7 @@ jobs:
           
       - name: Connect Tailscale
         run: |
-          & "C:\Program Files\Tailscale\tailscale.exe" up --authkey 'tskey-auth-kLDcTNwbq621CNTRL-aothC9D19Dfmu54P3hibCf7r9KLcBgAmP'
+          & "C:\Program Files\Tailscale\tailscale.exe" up --authkey 'tskey-auth-kyHq9VcqmG11CNTRL-XgSSR8JCKJTvfxeM8SnjHTGm5kdY4SDM'
           
       - name: Keep Alive (Max Limit)
         run: |
